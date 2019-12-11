@@ -1,0 +1,40 @@
+h5{
+ display: inline;
+ text-align: center
+}
+
+#content
+{
+  padding-top: 40px;
+  width: 80%;     /* specify a width! */
+  margin: 0 auto; /* center */
+}
+
+.center {
+ text-align: center
+}
+
+/* sizing for picture on HomePage */
+img {
+    width:30%;
+    height: auto;
+}
+
+/* add padding for social media icons */
+.fa-twitter{
+    margin-right:10px;
+    margin-left:10px;
+    color:rgb(60, 60, 60);
+}
+.fa-linkedin{
+    color:rgb(60, 60, 60);
+}
+.fa-instagram{
+    color:rgb(60, 60, 60);
+}
+
+#map_canvas
+{
+  width: 80%;     /* specify a width*/
+  margin: 0 auto; /* center */
+}
