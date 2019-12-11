@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="styles.css" rel="stylesheet">
+        <title>Duy Vu</title>
+    </head>
+    <body>
+
+
+
+        <div id ="content">
+          <!--Header-->
+          <h1 class="center">Hi, My name is
+            <a href="#"
+            data-toggle="tooltip"
+            data-placement="right" title="Pronounced Zoo-ey">Duy</a>
+          </h1>
+
+          <!--School and Work-->
+          <p class ="center">
+            <font size="-1">
+              Business Intelligence @
+              <a href="https://www.jpmorganchase.com/">JP Morgan Chase</a>
+              </br>
+              B.B.A Management Information Systems @
+              <a href="https://www.mccombs.utexas.edu/">UT Austin</a>
+            </font>
+          </p>
+          <!--Social media icons-->
+          <div class="text-center">
+            <!--LinkedIn-->
+            <a href="https://www.linkedin.com/in/duy-vu/" class="fa fa-linkedin"></a>
+            <!--Twitter-->
+            <a href="https://twitter.com/duyhvu07" class="fa fa-twitter"></a>
+            <!--Instagram-->
+            <a href="https://www.instagram.com/duyhvu07/" class="fa fa-instagram"></a>
+          </div>
+          <hr>
+           <!--Navigation bar-->
+          <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-secondary" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-secondary" href="about me.html">ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="books.html">FAVORITE BOOKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="music.html">FAVORITE MUSIC</a>
+          </li>
+          </ul>
+          <hr>
+
+        </div>
+
+
+        <!-- Profile picture -->
+
+        <div class="text-center">
+          <img src = "profile.JPG" class="img-thumbnail" alt="My profile picture"/>
+        </div>
+
+        <!--Script to display tooltips
+        referece:https://www.w3schools.com/bootstrap4/bootstrap_tooltip.asp-->
+        <script>
+          $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+          });
+        </script>
+
+    </body>
+</html>
