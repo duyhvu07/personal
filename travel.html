@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <style>#map_canvas { width:500px; height: 400px; }</style>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Duy Vu</title>
+    </head>
+
+<body>
+
+
+
+        <div id ="content">
+          <!--Header-->
+          <h1 class="center">Countries I've visited
+          </h1>
+
+          <hr>
+           <!--Navigation bar-->
+          <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-secondary" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-secondary" href="about me.html">ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="books.html">FAVORITE BOOKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="music.html">FAVORITE MUSIC</a>
+          </li>
+          </ul>
+          <hr>
+
+        <!-- Display google map -->
+
+        <div id="map_canvas"></div>
+
+        </div>
+
+    <!--Javascript to display google map -->
+
+    <script>
+        var map;
+        var markersArray = [];
+        var image = 'img/';
+        var bounds = new google.maps.LatLngBounds();
+        var loc;
+
+        function init(){
+            var mapOptions = { mapTypeId: google.maps.MapTypeId.ROADMAP };
+            map =  new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+            loc = new google.maps.LatLng("23.6345","-102.5528");
+            bounds.extend(loc);
+            addMarker(loc, 'Mexico', "active");
+
+            loc = new google.maps.LatLng("9.7489","-83.7534");
+            bounds.extend(loc);
+            addMarker(loc, 'Costa Rica', "active");
+
+            loc = new google.maps.LatLng("1.3521","103.8198");
+            bounds.extend(loc);
+            addMarker(loc, 'Singapore', "active");
+
+            loc = new google.maps.LatLng("4.2105","101.9758");
+            bounds.extend(loc);
+            addMarker(loc, 'Malaysia', "active");
+
+            loc = new google.maps.LatLng("14.0583","108.2772");
+            bounds.extend(loc);
+            addMarker(loc, 'Vietnam', "active");
+
+            loc = new google.maps.LatLng("37.0902","-95.7129");
+            bounds.extend(loc);
+            addMarker(loc, 'USA', "active");
+
+
+            map.fitBounds(bounds);
+            map.panToBounds(bounds);
+        }
+
+        function addMarker(location, name, active) {
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: name,
+                status: active
+            });
+        }
+
+        $(function(){ init(); });
+    </script>
+
+    </body>
+
+    </html>
+
+
