@@ -15,7 +15,7 @@
 
 
 
-        <div id ="content">
+        <div class ="content">
           <!--Header-->
           <h1 class="center">Countries I've visited
           </h1>
@@ -80,6 +80,19 @@
             loc = new google.maps.LatLng("37.0902","-95.7129");
             bounds.extend(loc);
             addMarker(loc, 'USA', "active");
+
+            loc = new google.maps.LatLng("49.8175","15.4730");
+            bounds.extend(loc);
+            addMarker(loc, 'Czech Republic', "active");
+
+            loc = new google.maps.LatLng("47.5162","14.5501");
+            bounds.extend(loc);
+            addMarker(loc, 'Austria', "active");
+
+            loc = new google.maps.LatLng("51.1657","10.4515");
+            bounds.extend(loc);
+            addMarker(loc, 'Germany', "active");
+
 
 
             map.fitBounds(bounds);
